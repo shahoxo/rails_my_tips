@@ -12,7 +12,7 @@ class Summary < ActiveRecord::Base
   # |11月| Ｃ | １ |
 
 
-  def self.Projection
+  def self.projection
     #1st column: 縦
     #2nd column: 横
     #3rd column: データ
@@ -22,7 +22,7 @@ class Summary < ActiveRecord::Base
     @depth.each do |depth_key|
       @width.each do |width_key|
         summary_map[depth_key][width_key] =
-            self.select(:summary_count).where(depth_key: depth_key).where(width_key: width_key)
+            self.select(:summary_count).where(depth_key: depth_key).where(width_key: width_key).first.try(:summary_count)
       end
     end
     summary_map
