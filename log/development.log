@@ -1,0 +1,179 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (2.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCubes (20120920032138)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "cubes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120920032138')
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSummaries (20120920032659)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCubes (20120920032138)
+Migrating to CreateSummaries (20120920032659)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCubes (20120920032138)
+Migrating to CreateSummaries (20120920032659)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "summaries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "month" varchar(255), "type" varchar(255), "type_count" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120920032659')[0m
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("cubes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("summaries")
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (3.9ms)[0m  DELETE FROM "summaries"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (83.3ms)[0m  INSERT INTO "summaries" ("created_at", "month", "type", "type_count", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 20 Sep 2012 03:53:40 UTC +00:00], ["month", "9月"], ["type", "B"], ["type_count", 2], ["updated_at", Thu, 20 Sep 2012 03:53:40 UTC +00:00]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "summaries" ("created_at", "month", "type", "type_count", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 20 Sep 2012 03:53:40 UTC +00:00], ["month", "9月"], ["type", "A"], ["type_count", 1], ["updated_at", Thu, 20 Sep 2012 03:53:40 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "summaries" ("created_at", "month", "type", "type_count", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 20 Sep 2012 03:53:40 UTC +00:00], ["month", "10月"], ["type", "A"], ["type_count", 3], ["updated_at", Thu, 20 Sep 2012 03:53:40 UTC +00:00]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "summaries" ("created_at", "month", "type", "type_count", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 20 Sep 2012 03:53:40 UTC +00:00], ["month", "11月"], ["type", "C"], ["type_count", 1], ["updated_at", Thu, 20 Sep 2012 03:53:40 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCubes (20120920032138)
+Migrating to CreateSummaries (20120920032659)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("cubes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("summaries")[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (7.4ms)[0m  DELETE FROM "summaries"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO "summaries" ("created_at", "month", "type", "type_count", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 20 Sep 2012 04:06:44 UTC +00:00], ["month", "9月"], ["type", "B"], ["type_count", 2], ["updated_at", Thu, 20 Sep 2012 04:06:44 UTC +00:00]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "summaries" ("created_at", "month", "type", "type_count", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 20 Sep 2012 04:06:44 UTC +00:00], ["month", "9月"], ["type", "A"], ["type_count", 1], ["updated_at", Thu, 20 Sep 2012 04:06:44 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "summaries" ("created_at", "month", "type", "type_count", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 20 Sep 2012 04:06:44 UTC +00:00], ["month", "10月"], ["type", "A"], ["type_count", 3], ["updated_at", Thu, 20 Sep 2012 04:06:44 UTC +00:00]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "summaries" ("created_at", "month", "type", "type_count", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 20 Sep 2012 04:06:44 UTC +00:00], ["month", "11月"], ["type", "C"], ["type_count", 1], ["updated_at", Thu, 20 Sep 2012 04:06:44 UTC +00:00]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCubes (20120920032138)
+Migrating to CreateSummaries (20120920041100)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "summaries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "depth_key" varchar(255), "width_key" varchar(255), "summary_count" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+SQLite3::SQLException: table "summaries" already exists: CREATE TABLE "summaries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "depth_key" varchar(255), "width_key" varchar(255), "summary_count" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (3.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCubes (20120920032138)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "cubes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120920032138')
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSummaries (20120920041100)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "summaries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "depth_key" varchar(255), "width_key" varchar(255), "summary_count" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120920041100')
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("cubes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("summaries")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (8.0ms)[0m  DELETE FROM "summaries"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.9ms)[0m  INSERT INTO "summaries" ("created_at", "depth_key", "summary_count", "updated_at", "width_key") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 20 Sep 2012 04:21:21 UTC +00:00], ["depth_key", "9月"], ["summary_count", 2], ["updated_at", Thu, 20 Sep 2012 04:21:21 UTC +00:00], ["width_key", "B"]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "summaries" ("created_at", "depth_key", "summary_count", "updated_at", "width_key") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 20 Sep 2012 04:21:21 UTC +00:00], ["depth_key", "9月"], ["summary_count", 1], ["updated_at", Thu, 20 Sep 2012 04:21:21 UTC +00:00], ["width_key", "A"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "summaries" ("created_at", "depth_key", "summary_count", "updated_at", "width_key") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 20 Sep 2012 04:21:21 UTC +00:00], ["depth_key", "10月"], ["summary_count", 3], ["updated_at", Thu, 20 Sep 2012 04:21:21 UTC +00:00], ["width_key", "A"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "summaries" ("created_at", "depth_key", "summary_count", "updated_at", "width_key") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 20 Sep 2012 04:21:21 UTC +00:00], ["depth_key", "11月"], ["summary_count", 1], ["updated_at", Thu, 20 Sep 2012 04:21:21 UTC +00:00], ["width_key", "C"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (7.4ms)[0m  DELETE FROM "summaries"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (42.7ms)[0m  INSERT INTO "summaries" ("created_at", "depth_key", "summary_count", "updated_at", "width_key") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 20 Sep 2012 06:21:44 UTC +00:00], ["depth_key", "09月"], ["summary_count", 2], ["updated_at", Thu, 20 Sep 2012 06:21:44 UTC +00:00], ["width_key", "B"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "summaries" ("created_at", "depth_key", "summary_count", "updated_at", "width_key") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 20 Sep 2012 06:21:44 UTC +00:00], ["depth_key", "09月"], ["summary_count", 1], ["updated_at", Thu, 20 Sep 2012 06:21:44 UTC +00:00], ["width_key", "A"]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "summaries" ("created_at", "depth_key", "summary_count", "updated_at", "width_key") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 20 Sep 2012 06:21:44 UTC +00:00], ["depth_key", "10月"], ["summary_count", 3], ["updated_at", Thu, 20 Sep 2012 06:21:44 UTC +00:00], ["width_key", "A"]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "summaries" ("created_at", "depth_key", "summary_count", "updated_at", "width_key") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 20 Sep 2012 06:21:44 UTC +00:00], ["depth_key", "11月"], ["summary_count", 1], ["updated_at", Thu, 20 Sep 2012 06:21:44 UTC +00:00], ["width_key", "C"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml

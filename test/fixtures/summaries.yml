@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  depth_key: MyString
+  width_key: MyString
+  summary_count: 1
+
+two:
+  depth_key: MyString
+  width_key: MyString
+  summary_count: 1
