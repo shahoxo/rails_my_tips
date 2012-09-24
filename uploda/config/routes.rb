@@ -1,10 +1,9 @@
 Upld::Application.routes.draw do
-  # get "pictures/new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  resource :pictures do
+  resources :pictures do
     get :download
   end
 
@@ -22,7 +21,7 @@ Upld::Application.routes.draw do
   # Sample resource route with options:
   #   resources :products do
   #     member do
-  #       get 'short'
+  #       get 'short'                s
   #       post 'toggle'
   #     end
   #

@@ -1,5 +1,6 @@
+# encoding: utf-8
 class Picture < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :comment, :uploaded_picture
   validates_format_of :content_type,
                       with: /^image/,
                       message: "--- アップロードできるのは画像だけです"
