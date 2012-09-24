@@ -1,0 +1,15 @@
+<%= form_for (@picture, url: {action: 'create'}, html: {multipart: true}) do |form| %>
+  <% if @picture.errors.any? %>
+    <h2><%= @picture.errors.count %>個のエラーが発生しました。</h2>
+    <ul>
+      <% @picture.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  コメント:                     <%= form.text_field("comment") %><br />
+  アップロードする画像:           <%= form.file_field("uploaded_picture") %><br />
+
+  <%= submit_tag("ファイルをアップロード") %>
+<% end %>

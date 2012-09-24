@@ -1,6 +1,12 @@
 Upld::Application.routes.draw do
+  # get "pictures/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
+
+  resource :pictures do
+    get :download
+  end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
