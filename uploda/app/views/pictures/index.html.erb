@@ -1,0 +1,31 @@
+<%= distance_of_time_in_words(Time.now, Time.local(2012, 12, 12)) %>
+<br/>
+<%= distance_of_time_in_words(Time.now, Time.now + 33, false) %>
+<br/>
+<%= distance_of_time_in_words(Time.now, Time.now + 33, true) %>
+<br/>
+<%= time_ago_in_words(Time.local(2010, 12, 12)) %>
+<br/>
+<%= number_to_currency(123.45) %>
+<br/>
+<%= number_to_currency(234.56, unit: "CAN$", precision: 0) %>
+<br/>
+<%= number_to_human_size(123_456) %>
+<br/>
+<%= number_to_percentage(66.666) %>
+<br/>
+<%= number_to_percentage(66.66666, precision: 1) %>
+<br/>
+<%= number_to_phone(2125551212, area_code: true, delimiter: " ") %>
+<br/>
+<%= number_with_delimiter(1234567) %>
+<br/>
+<%= number_with_delimiter(12345678, delimiter: "_") %>
+<br/>
+<%= number_with_precision(50.0/3, precision: 2) %>
+<br/>
+
+<% content_for :sidebar do %>
+  <h2>Profile</h2>
+
+<% end %>
